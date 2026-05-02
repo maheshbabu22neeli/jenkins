@@ -35,7 +35,13 @@ pipeline {
     }
     post {
         always {
-            echo "Job Success"
+            echo 'I will always says hello world'
+        }
+        success {
+            echo 'Job Success'
+        }
+        failure {
+            echo 'Job Failure'
         }
     }
 
