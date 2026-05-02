@@ -22,7 +22,6 @@ pipeline {
         booleanParam(name: 'TOGGLE', defaultValue: true, description: 'Toggle this value')
         choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
-        string(name: 'PROJECT', defaultValue: ${project}, description: 'Project Name')
     }
     stages {
         stage('Build') {
@@ -30,7 +29,6 @@ pipeline {
                 script {
                     sh """
                         echo 'Building..... ${project}'
-                        echo 'Building..... Parameter value ${params.PROJECT}'
                         sleep 20
                     """
                 }
