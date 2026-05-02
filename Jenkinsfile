@@ -29,7 +29,7 @@ pipeline {
                 script {
                     sh """
                         echo 'Building..... ${project}'
-                        sleep 20
+                        sleep 5
                     """
                 }
             }
