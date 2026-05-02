@@ -9,7 +9,7 @@ pipeline {
         course = "devOps"
     }
     options {
-        diableConcurrentBuilds()
+        disableConcurrentBuilds()
     }
     stages {
         stage('Build') {
