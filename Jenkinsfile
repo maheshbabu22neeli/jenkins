@@ -4,13 +4,16 @@ pipeline {
             label 'ROBOSHOP'
         }
     }
+    environment {
+        project = "roboshop"
+        course = "devOps"
+    }
     stages {
         stage('Build') {
             steps {
                 script {
                     sh """
-                        echo 'Building.....'
-                        exit 1
+                        echo 'Building..... ${project}'
                     """
                 }
             }
@@ -19,7 +22,7 @@ pipeline {
             steps {
                 script {
                     sh """
-                        echo 'Testing.....'
+                        echo 'Testing..... ${project}'
                     """
                 }
             }
@@ -28,7 +31,7 @@ pipeline {
             steps {
                 script {
                     sh """
-                        echo 'Deploying.....'
+                        echo 'Deploying..... ${project}'
                     """
                 }
             }
