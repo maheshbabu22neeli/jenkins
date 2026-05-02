@@ -57,6 +57,7 @@ pipeline {
                     string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
                 }
             } */
+            // If DEPLOY is false, this stage won't trigger
             when {
                  expression { params.DEPLOY == true }
             }
