@@ -8,6 +8,9 @@ pipeline {
         project = "roboshop"
         course = "devOps"
     }
+    options {
+        diableConcurrentBuilds()
+    }
     stages {
         stage('Build') {
             steps {
