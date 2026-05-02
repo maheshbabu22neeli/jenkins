@@ -33,5 +33,10 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            echo "Job Success"
+        }
+    }
 
 }
